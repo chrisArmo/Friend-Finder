@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder | Survey</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Nav Container -->
+    <div class="container">
+        <a class="navbar-brand mr-auto" href="#">Friend Finder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/survey">Survey <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/friends">Friend Finder API</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /Nav Container -->
+</nav><!-- /Navbar -->
+
+<!-- Main Container -->
+<div class="container mb-5">
+    <div class="row">
+        <!-- Header -->
+        <header class="col-sm-12 text-center">
+            <h1 class="display-4 my-3 my-md-4 my-lg-5">Friend Finder Survey</h1>
+        </header><!-- /Header -->
+    </div>  
+    
+    <!-- Main Content -->
+    <main class="row">
+        <!-- Survey Form -->
+        <form id="survey" class="col-sm-12">
+            <!-- User Info -->
+            <div class="form-group row my-2 my-md-3">
+                <label for="full-name" class="col-sm-2 col-form-label">Full Name</label>
+                <div class="col-sm-10">
+                    <input type="text" name="full_name" class="form-control" id="full-name" placeholder="Jane Smith" required>
+                </div>
+            </div>
+            <div class="form-group row mb-3 mb-md-4 mb-lg-5">
+                <label for="image-url" class="col-sm-2 col-form-label">Image URL</label>
+                <div class="col-sm-10">
+                    <input type="text" name="" class="form-control" id="image-url" placeholder="http://imagedomain.com/person.jpg" required>
+                </div>
+            </div><!-- /User Info -->
+            
+            <!-- Survey Questions -->
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Chocolate on strawberries is your jam?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Gazing up at the starry night sky makes you happy?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>You prefer vibrant colors over dark ones?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>You'd rather starve than eat fast food?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Cookies with milk or an alternative milk is the only way?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Karma is real?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Horoscope match-ups are crucial?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Hiking adventurously trumps the great indoors?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>Loving, laughing, and being without ego makes sense?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-5">
+                    <div class="form-group">
+                        <h4>The earth is flat?</h4>
+                        <label for="exampleFormControlSelect1">
+                            Completely Agree (5) Definitely Disagree (1)
+                        </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+            </div><!-- /Survey Questions -->
+
+            <!-- Submit Button -->
+            <div class="form-group col-12">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-dark">Find Friend</button>
+                </div>
+            </div><!-- /Submit Button -->
+        </form><!-- /Survey Form -->
+    </main><!-- /Main Content -->
+</div><!-- /Main Container -->
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<!-- Author JS -->
+<script src="/assets/js/survey.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>
