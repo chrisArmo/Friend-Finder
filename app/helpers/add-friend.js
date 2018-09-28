@@ -17,9 +17,10 @@ const addFriend = (incoming) => {
         if (!err) {
             const friends = JSON.parse(data);
             friends.push(incoming);
+            const friendsString = JSON.stringify(friends);
             fs.writeFile(
                 path.join(process.cwd(), "app/data/friends.json"), 
-                JSON.stringify(friends),
+                friendsString,
                 (err) => {
                     if (!err) {
                         console.log(`${incoming.name} has been successfully added to json data file`);

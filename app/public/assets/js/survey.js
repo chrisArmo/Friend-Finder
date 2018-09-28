@@ -26,13 +26,21 @@ const postSurveyData = (e) => {
     });
     $("#full-name").val("");
     $("#image-url").val("");
-    // location.reload();
+    $("select option:nth-child(3)").prop("selected", true);
     $.post("/api/friends", {
         name,
         image,
         scores
     }, (data) => {
         console.log(data);
+        $(".modal-title").text(`Your new bestie: ${data.name}`);
+        $(".modal-body").html(`
+            <img 
+                src="${data.image}" 
+                alt="Random people placeholder image"
+                class="img-fluid rounded" />
+        `);
+        $("#friendMatchModal").modal("show");
     });
 };
 

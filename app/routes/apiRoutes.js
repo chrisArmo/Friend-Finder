@@ -16,9 +16,7 @@ addFriend = require("../helpers/add-friend");
 // Router
 const router = express.Router(),
 // Parse url encoded
-parseUrl = bodyParser.urlencoded({extended: true}),
-// Parse json
-parseJson = bodyParser.json();
+parseUrl = bodyParser.urlencoded({extended: true});
 
 // Routes
 // ----------------------------------------
@@ -31,9 +29,9 @@ router.get("/api/friends", (req, res) => {
 // Post friends
 router.post("/api/friends", parseUrl, (req, res) => {
     const {body: newFriend} = req;
+    newFriend.scores = newFriend.scores.map((score) => parseInt(score, 10));
     addFriend(newFriend);
-    // match(newFriend);
-    res.json(req.body);
+    match(newFriend, res);
 });
 
 // Export
