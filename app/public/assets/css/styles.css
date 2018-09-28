@@ -1,6 +1,7 @@
 /* Modal
 ---------------------------------------- */
 
-#friendMatchModal img {
-    max-height: 200px;
+#friendMatchModal .modal-content .modal-body img {
+    max-width: 70%;
+    margin: 1em 0.5em;
 }
