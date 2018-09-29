@@ -19,7 +19,7 @@ const title = (text) => text.split(" ").map(capitalize).join(" ");
 const postSurveyData = (e) => {
     e.preventDefault();
     const namePattern = /^[a-z]{2,20}((\s|-)[a-z]{2,20}){0,5}$/i,
-        imagePattern = /^.{5,}/i,
+    imagePattern = /^.{5,}/i,
     name = title($("#full-name").val().trim()),
     image = $("#image-url").val().trim(),
     selects = $("#survey select"),
@@ -36,8 +36,8 @@ const postSurveyData = (e) => {
             scores
         }, (data) => {
             console.log(data);
-            $(".modal-title").text(`Your new bestie: ${data.name}`);
-            $(".modal-body").html(`
+            $("#friendMatchModal .modal-title").text(`Your new bestie: ${data.name}`);
+            $("#friendMatchModal .modal-body").html(`
                 <img 
                     src="${data.image}" 
                     alt="Random people placeholder image"
