@@ -19,7 +19,7 @@ const title = (text) => text.split(" ").map(capitalize).join(" ");
 const postSurveyData = (e) => {
     e.preventDefault();
     const namePattern = /^[a-z]{2,20}((\s|-)[a-z]{2,20}){0,5}$/i,
-        imagePattern = /^.{5,}\.(jpe?g|gif|png)$/i,
+        imagePattern = /^.{5,}/i,
     name = title($("#full-name").val().trim()),
     image = $("#image-url").val().trim(),
     selects = $("#survey select"),
